@@ -11,10 +11,10 @@ public class Solution {
         int n = Integer.parseInt(inputs[0]);
         int t = Integer.parseInt(inputs[1]);
         char[] queue = br.readLine().toCharArray();
-        if(queue.length == n){
-            for(int i=0; i<t; i++){
-                for(int j=0; j< queue.length; j++){
-                    if(queue[j] == 'B' && queue[j+1] =='G'){
+        if(n == queue.length){
+            for(int i=0; i< t; i++){
+                for(int j=0; j< queue.length-1 ; j++){
+                    if(queue[j]== 'B' && queue[j+1] == 'G'){
                         queue[j] = 'G';
                         queue[j+1] = 'B';
                         j++;
